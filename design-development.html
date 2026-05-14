@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Concept Design | COMP60019 Portfolio</title>
+		<title>Design Development | COMP60019 Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -30,11 +30,11 @@
 			<section id="menu">
 				<section>
 					<ul class="links">
-						<li><a href="concept-design.html"><h3>1. Concept Design</h3><p>High-level ideation and initial direction</p></a></li>
-						<li><a href="design-development.html"><h3>2. Design Development</h3><p>Mechanical design and cost engineering</p></a></li>
+						<li><a href="concept-design.html"><h3>1. Concept Design</h3><p>Ideas and initial direction</p></a></li>
+						<li><a href="design-development.html"><h3>2. Design Development</h3><p>Mechanical design</p></a></li>
 						<li><a href="detailed-development.html"><h3>3. Detailed Development</h3><p>Refined design and file-to-fabrication considerations</p></a></li>
 						<li><a href="preproduction.html"><h3>4. Preproduction</h3><p>Physical samples and prototypes</p></a></li>
-						<li><a href="production.html"><h3>5. Production</h3><p>Final artefacts and critical reflection</p></a></li>
+						<li><a href="production.html"><h3>5. Production</h3><p>Final artefacts</p></a></li>
 					</ul>
 				</section>
 			</section>
@@ -44,11 +44,11 @@
 
 					<header>
 						<div class="title">
-							<h2>1. Concept Design</h2>
-							<p>Defining the problem, selecting a form, and scoping the prototype</p>
+							<h2>2. Design Development</h2>
+							<p>Mechanical design, material selection, skin system, and costs</p>
 						</div>
 						<div class="meta">
-							<time class="published" datetime="2026-01-01">Stage 1</time>
+							<time class="published" datetime="2026-01-01">Stage 2</time>
 							<a href="index.html" class="author">
 								<span class="name">Your Name</span>
 								<img src="images/avatar.jpg" alt="" />
@@ -56,105 +56,185 @@
 						</div>
 					</header>
 
-					<!-- IMAGE: Replace with your pterodactyl concept sketch or a strong hero image -->
-					<span class="image featured"><img src="images/pic01.jpg" alt="Pterodactyl concept sketch" /></span>
+					<!-- IMAGE: Replace with a design development image — CAD render, annotated sketch, etc. -->
+					<span class="image featured"><img src="images/pic02.jpg" alt="Design Development" /></span>
 
 
-					<h3>Defining the Brief</h3>
+					<h3>Structural and Mechanical Design</h3>
 					<p>
-						The starting point for this project was an open-ended brief: to design and prototype an exoskeletal
-						solution for a robotic application. Rather than being prescribed a subject, a range of animal forms
-						were discussed as candidates. A pterodactyl was ultimately selected, largely because of the distinctive
-						structural properties of its wing anatomy — a large, thin membrane supported by an articulated skeletal
-						frame — which maps naturally onto the exoskeletal skin and actuation challenge the module set out to explore.
-					</p>
-
-					<!-- IMAGE: Replace src with your pterodactyl sketch — (Sketch pterodactyl) -->
-					<span class="image fit"><img src="images/pic01.jpg" alt="Initial pterodactyl concept sketch" /></span>
-
-					<p>
-						With the animal form chosen, the next question was context of use. A pterodactyl animatronic could
-						serve several settings, and each implied a very different set of design priorities.
-					</p>
-
-
-					<h3>Use Case Selection</h3>
-					<p>
-						Three candidate use cases were considered: a museum exhibit, a theme park installation, and an
-						educational resource for primary schools. Each was evaluated against practical criteria including
-						anatomical accuracy requirements, durability, maintenance burden, audience expectations, and
-						budget implications.
+						With the concept established, design development focused on translating the decisions of
+						Stage 1 into a workable mechanical structure. The first decision concerned the wing joint
+						configuration. A three-joint articulated wing structure was initially proposed, as this would more
+						closely replicate the biomechanics of a pterodactyl wing. However, this was abandoned following a
+						risk assessment: the added complexity of a three-joint system introduced multiple potential points
+						of mechanical failure, required significantly more precise tolerancing across printed components,
+						and would have substantially increased build time; all of which were not feasible within the
+						project's constraints.
 					</p>
 					<p>
-						A museum setting would demand a high degree of anatomical accuracy, as visitors would likely include
-						adults and students with some prior knowledge of palaeontology. This would heavily constrain the design
-						and significantly increase both the complexity and cost of the build. A theme park installation, while
-						more forgiving on accuracy, would require the prototype to withstand a high-footfall public environment —
-						implying a much greater engineering effort than a single academic prototype allows.
-					</p>
-					<p>
-						Primary school education was selected as the target use case. Children of primary school age are engaged
-						primarily through visual impact and novelty rather than scientific rigour, which permits a degree of
-						creative licence in the anatomical design. Crucially, this context also carries a lower maintenance
-						burden: the prototype could be housed in a protective display case, removing the need to engineer for
-						direct handling or environmental exposure. A cased animatronic that visibly flaps its wings is sufficient
-						to achieve the engagement objective, and that simplicity keeps the scope achievable within the module's
-						time and resource constraints.
+						A simplified single-joint wing mechanism was adopted instead. This represents a pragmatic compromise
+						between realism and deliverability, and remains appropriate for the primary school use case, where
+						the visual impression of wing movement is the priority rather than biomechanical accuracy.
 					</p>
 
+					<!-- IMAGE: Replace src with (point of joints and skeletal framework) -->
+					<span class="image fit"><img src="images/pic02.jpg" alt="Skeletal framework and joint points" /></span>
 
-					<h3>Design Scope and Actuation</h3>
+
+					<h3>Fabrication Method: 3D Printing</h3>
 					<p>
-						With the use case established, the actuation scope needed to be defined. The module brief required some
-						form of mechanical actuation to be incorporated. Several candidates were considered: neck movement,
-						jaw articulation, and wing flapping. Wing flapping was selected as the primary actuation goal because
-						it is the most visually dramatic and immediately legible motion for a pterodactyl — particularly for
-						a young audience. A visibly flapping wing communicates the concept of an animatronic far more
-						effectively than a subtle jaw or neck movement.
-					</p>
-
-					<!-- IMAGE: Replace src with (sketch of initial design) -->
-					<span class="image fit"><img src="images/pic01.jpg" alt="Actuation scope — initial design sketch" /></span>
-
-					<p>
-						Additional actuation — neck movement and jaw articulation — was documented as a stretch goal.
-						A purpose-built display stand or suspension rig was similarly considered. Both were formally scoped
-						out at this stage due to time constraints. Making this decision early was valuable: retaining
-						out-of-reach goals in scope without capacity to execute them would have introduced scope creep
-						into the design and fabrication stages.
-					</p>
-
-
-					<h3>Demographic Considerations and Accuracy</h3>
-					<p>
-						The primary school demographic directly shaped several design parameters. Anatomical accuracy was treated
-						as a soft constraint rather than a hard requirement. This is a justifiable position: the prototype is
-						an educational engagement tool, not a palaeontological reconstruction. Gaps in colour continuity,
-						slightly exaggerated proportions, or simplified surface texture are acceptable — and may even be
-						preferable — for an audience of young children, for whom visual impact outweighs scientific fidelity.
+						3D printing was selected as the primary fabrication method for the skeletal framework. This decision
+						was informed by both budget and practical considerations. Of the fabrication technologies explored
+						in the module, 3D printing offered the best balance of design freedom, cost, and accessibility for
+						this prototype.
 					</p>
 					<p>
-						The decision to case the prototype is also consistent with the target demographic. Children in a school
-						setting cannot reliably be prevented from handling or damaging an exposed model. A display case protects
-						the mechanism from accidental damage while simultaneously framing the animatronic in a museum-style
-						context that reinforces its educational purpose.
+						3D printing allows exact geometries	to be reproduced from CAD models, 
+						tolerances to be specified and adjusted between iterations, and
+						complex internal structures to be included where needed.
+					</p>
+
+					<h4>Techniques Considered but Not Used</h4>
+					<p>
+						Several other fabrication technologies covered in the module were evaluated and excluded
+						from this stage of the process:
+					</p>
+					<p>
+						<strong>3D Scanning</strong> — 3D scanning hardware and software were available through workshop
+						facilities. This technique would have been useful if an existing physical model of appropriate
+						scale and form were available to digitise, providing an accurate starting point for the
+						CAD work. No suitable reference model existed for this use case, so 3D scanning offered no practical
+						benefit at this stage. In an industrial context, for example, digitising an existing animatronic
+						component for reverse engineering, would be highly valuable.
+					</p>
+					<p>
+						<strong>Motion Capture</strong> — Motion capture was considered as a means of referencing realistic
+						wing movement for the actuation design. The most mechanically relevant comparisons available were
+						bat wings; however, the kinematic data this would have produced did not translate meaningfully into
+						the constraints of a 3D-printed compliant mechanism. Motion capture is powerful for character
+						animation pipelines in robotics, but at this prototype scale and with a simplified
+						joint structure, it added complexity without a proportional benefit.
+					</p>
+					<p>
+						<strong>Haptic Sculpting</strong> — Haptic input devices paired with 3D sculpting software were
+						available in the module's facilities. This approach was considered for generating organic surface
+						geometry (for the body of the pterodactyl). It was not pursued because the prototype
+						prioritised a compliant mechanism design, in which geometric precision is more important than
+						organic surface form. Haptic sculpting excels at creating naturalistic, freeform shapes but is
+						less suited to producing the kind of geometry required for a functional
+						mechanical assembly.
+					</p>
+					<p>
+						<strong>Resin Casting</strong> — Resin production and post-production facilities were available
+						in the module workshops. Resin was considered and rejected for use on this prototype for several
+						reasons: it is brittle and would impede or damage the wing motion at joint locations; it does not
+						replicate the properties of organic skin convincingly; and it is more expensive
+						per unit volume than the alternatives selected. In a different application (for example, producing
+						rigid panels or transparent components) it would be a strong choice.
+					</p>
+					<p>
+						<strong>Laser Cutting</strong> — Laser cutting was considered as a means of producing a display
+						stand or base for the prototype. This remained a stretch goal from the concept stage and was not
+						met due to time constraints. Laser cutting would be well-suited to producing a flat-pack
+						stand from sheet material. It remains a viable method for future iterations of the
+						the display solution.
+					</p>
+
+
+					<h3>Material Selection</h3>
+					<p>
+						For 3D printed components, PETG (Polyethylene Terephthalate Glycol) was identified as the most
+						appropriate filament material at this stage. PLA was considered as the baseline option due to
+						its ease of printing, but was assessed as insufficiently durable for the final artefact
+						repeated mechanical stress. ABS was also evaluated as it offers better temperature and impact
+						resistance than PLA but its tendency to warp during printing and the need for an enclosure
+						to manage print conditions made it less practical for the available hardware.
+					</p>
+					<p>
+						PETG was selected as the best compromise: it prints reliably without the warping issues of ABS,
+						offers significantly better impact resistance and layer adhesion than PLA, and has good chemical
+						and UV resistance. This was a relevant consideration for a display piece that may be exposed to ambient
+						light over extended periods. Its relative toughness rather than brittleness is also appropriate
+						for a school environment, where the prototype may experience incidental impact forces even within
+						a display case.
+					</p>
+
+
+					<h3>Skin System Design</h3>
+					<p>
+						The skin system was designed with two distinct zones requiring different treatments: the body
+						surface and the wing membrane.
+					</p>
+
+					<!-- IMAGE: Replace src with (png of potential attachment points of skin plus seams for access points) -->
+					<span class="image fit"><img src="images/pic02.jpg" alt="Skin attachment points and access seams" /></span>
+
+					<p>
+						<strong>Body skin</strong> — The body of the pterodactyl would be covered with silicone, applied
+						layer by layer to build up a skin of consistent depth. In areas where direct silicone application
+						would be impractical such as regions with curves or sharp geometries, a foam or
+						similar substrate was proposed to provide a rounded base before the silicone layer is applied.
+						This is a technique used in professional animatronic and prosthetic fabrication to achieve
+						smooth, consistent surface coverage without excessive silicone volume.
+					</p>
+					<p>
+						Access to internal mechanisms was a key design consideration. Silicone seams were planned at
+						natural anatomical positions (such as the midsection) to allow the skin to be opened for
+						maintenance without destroying it. Magnetic panel closures were proposed at access points,
+						allowing panels to be held closed by concealed magnets and removed without tools. Slight
+						overlap of skin at these points in their natural resting position would conceal the join.
+					</p>
+					<p>
+						<strong>Wing membrane</strong> — The wing membrane presents a different structural challenge:
+						it must be flexible, visually and capable of withstanding the repeated stress of repeated
+						flapping. Silicone alone is insufficient for this as it does not handle
+						tensile stress well and would be prone to tearing at stress concentrations near the joint and
+						frame attachment points.
+					</p>
+					<p>
+						The approach decided was a fabric membrane with a thin silicone overcoat. The fabric
+						handles the load and the stress of repeated flexing, while the silicone provides
+						the visual finish and surface texture. The fabric would be wrapped around the bone frame edges
+						one to two times and glued at defined points only because applying adhesive across the full span
+						would make the membrane inaccessible for repair and would restrict the natural folding behaviour.						
+					</p>
+
+
+					<h3>Colour Scheme</h3>
+					<p>
+						The colour palette was planned around muted, natural tones like grey, brown, and dull green.
+						This is consistent with the kind of speculative colouration applied to pterodactyl reconstructions in
+						typical illustrations. Tinting the silicone at the mix stage would provide
+						a consistent base skin tone. Surface painted detail such as darker tones at stress points or
+						joint areas, (which in living animals often correlate to thicker skin or scale concentration) 
+						could be applied on top if the base layer achieved a sufficient quality.
+					</p>
+
+
+					<h3>Costs</h3>
+					<p>
+						<!-- Add your notes here on cost. What professional methods were considered and ruled out on cost?
+						     What compromises were made to keep within budget? What is the approximate cost of materials selected? -->
+						[Add your cost engineering content here — what professional alternatives were considered and
+						why they were not cost-effective for this prototype. What compromises were made?]
+						Th
 					</p>
 
 
 					<h3>References</h3>
 					<ul>
-						<!-- Harvard format examples:
-						     Book:    SURNAME, I., Year. Title. Place: Publisher.
-						     Journal: SURNAME, I., Year. Article title. Journal, Vol(Issue), pp.X-Y.
-						     Web:     SURNAME, I., Year. Title [online]. Available at: URL [Accessed DD Mon YYYY]. -->
-						<li>ADD YOUR REFERENCES HERE in Harvard format.</li>
+						<li>ADD YOUR REFERENCES HERE in Harvard format.
+						Ali, S. (2026) Pterodactyl isolated on a transparent background 24063834 PNG. Vecteezy.
+						Available at: https://www.vecteezy.com/png/24063834-pterodactyl-isolated-on-a-transparent-background (Accessed: 14 May 2026).</li>
+						<li>Monroe, M., Clapp, N., Jandaur, I. and Ogden, J. (2022) Barker Bird Animatronic Senior Project Report. California Polytechnic State University, San Luis Obispo.
+						Available at: https://digitalcommons.calpoly.edu/mesp/646 (Accessed: 14 May 2026).</li>
 					</ul>
 
 
 					<footer>
 						<ul class="actions pagination">
-							<li><a class="button disabled previous">Previous Stage</a></li>
-							<li><a href="design-development.html" class="button next">Next Stage</a></li>
+							<li><a href="concept-design.html" class="button previous">Previous Stage</a></li>
+							<li><a href="detailed-development.html" class="button next">Next Stage</a></li>
 						</ul>
 					</footer>
 
