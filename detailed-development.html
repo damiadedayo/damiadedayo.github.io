@@ -65,7 +65,7 @@
 						Detailed development translated the design decisions of Stage 2 into fully resolved 3D models
 						ready for fabrication. The skeletal framework and joint components were modelled in CAD software,
 						with geometry refined to account for the mechanical constraints of the actuation system and the
-						tolerances achievable with FDM (Fused Deposition Modelling) 3D printing.
+						tolerances achievable with 3D printing.
 					</p>
 
 					<!-- IMAGE: Replace src with (pmg of body) — your CAD/model screenshot -->
@@ -111,17 +111,17 @@
 						Selecting an appropriate motor for the wing-flapping mechanism required consideration of the
 						motion type, torque requirements, and control complexity. A servo motor was identified as the
 						most suitable option. Unlike a standard DC motor, which produces continuous rotation, a servo
-						can be commanded to move between defined angular positions — for example, 0° to 90° — making
+						can be commanded to move between defined angular positions making
 						it well-suited to the controlled, reciprocating motion of a wing flap. Servo motors are also
 						significantly easier to control precisely using a microcontroller such as an Arduino, compared
 						to a DC motor that would require additional speed and direction control circuitry.
 					</p>
 					<p>
 						Given the approximate one-foot wingspan of the prototype, a medium-torque metal gear servo was
-						specified — such as the MG90S or equivalent. Micro servos were ruled out as insufficiently
+						specified such as the MG90S or equivalent. Micro servos were ruled out as insufficiently
 						powerful: the inertia of the wing arm and membrane during flapping would likely cause a micro
 						servo to stall or overheat under load. A metal gear train was preferred over a plastic gear servo
-						for the same reason — it provides greater load capacity and longevity under the cyclical stress
+						because it provides greater load capacity and longevity under the cyclical stress
 						of repeated actuation.
 					</p>
 					<p>
@@ -136,8 +136,8 @@
 					<h3>Material Finalisation: PETG</h3>
 					<p>
 						PETG was confirmed as the print material for all structural components during this stage.
-						The properties that made it appropriate were its combination of toughness — it does not shatter
-						under impact the way PLA can — good temperature resistance, strong inter-layer adhesion compared
+						The properties that made it appropriate were its combination of toughness (it does not shatter
+						under impact the way PLA can) good temperature resistance, strong inter-layer adhesion compared
 						to PLA, and reliable printability without the warping issues associated with ABS. For a prototype
 						intended for a school environment, the impact resistance of PETG is particularly relevant.
 						Components that might be accidentally struck or dropped have a much higher chance of surviving
